@@ -10,7 +10,7 @@ function validFormInput() {
   if (inputPassword.value.length < 6) {
     alert("Пароль должен содержать минимум 6 символов");
   } else {
-    alert(`${inputLogin.value}, Добро пожаловать`);
+    alert(`${inputLogin.value}, Добро пожаловать!`);
     inputLogin.value === "";
     inputPassword.value === "";
   }
