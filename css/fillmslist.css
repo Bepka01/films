@@ -1,0 +1,139 @@
+header {
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+  background-color: var(--color-gray);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.btn__header {
+  display: flex;
+  gap: 30px;
+}
+.btn__films {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.btn__films * {
+  border: 1px solid black;
+  border-radius: 12px;
+  max-width: 280px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.btn__films button {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn__films button:hover {
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-gray);
+}
+
+.film__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.film__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 950px;
+  width: 100%;
+  background-color: var(--color-gray);
+  border-radius: 12px;
+  height: auto;
+  padding: 10px;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.movie-checkbox {
+  display: none;
+}
+
+.movie-label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6c757d;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.movie-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dee2e6;
+  border-radius: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.movie-checkbox:checked + .movie-label::before {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.movie-checkbox:checked + .movie-label::after {
+  content: "✓";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.movie-checkbox:checked + .movie-label {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.movie-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.movie-checkbox:checked ~ .movie-title {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
