@@ -3,7 +3,7 @@ const inputPassword = document.querySelector(".authorization__password");
 const autBtn = document.querySelector(".btn__auth");
 
 function validFormInput() {
-  if (inputLogin.value === "" || inputPassword.value === "") {
+  if (inputLogin.value.trim() === "" || inputPassword.value.trim() === "") {
     alert("Заполните форму");
     return false;
   }
@@ -11,8 +11,8 @@ function validFormInput() {
     alert("Пароль должен содержать минимум 6 символов");
   } else {
     alert(`${inputLogin.value}, Добро пожаловать!`);
-    inputLogin.value === "";
-    inputPassword.value === "";
+    inputLogin.value = "";
+    inputPassword.value = "";
   }
 }
 
