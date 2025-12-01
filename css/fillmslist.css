@@ -26,6 +26,16 @@ header {
   margin-bottom: 50px;
 }
 
+.movie__btn {
+  padding: 10px;
+  border: 2px solid var(--color-gray);
+  border-radius: 12px;
+  transition: all 0.3s ease-in;
+}
+.movie__btn:hover {
+  border: 2px solid red;
+}
+
 .btn__films button {
   transition: all 0.3s ease-in-out;
 }
