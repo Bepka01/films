@@ -1,6 +1,6 @@
 const inputLogin = document.querySelector(".authorization__login");
 const inputPassword = document.querySelector(".authorization__password");
-const autBtn = document.querySelector(".btn__auth");
+const authBtn = document.querySelector(".btn__auth");
 
 function validFormInput() {
   if (inputLogin.value.trim() === "" || inputPassword.value.trim() === "") {
@@ -16,4 +16,4 @@ function validFormInput() {
   }
 }
 
-autBtn.addEventListener("click", validFormInput);
+authBtn.addEventListener("click", validFormInput);

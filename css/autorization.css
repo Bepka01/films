@@ -24,6 +24,7 @@ body {
   font-family: var(--font-famaly);
   font-weight: 600;
   box-shadow: 1px 1px 5px gray;
+  margin: 10px;
 }
 
 .authorization__btn {
@@ -73,4 +74,14 @@ body {
   align-items: flex-start;
   flex-direction: column;
   margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .authorization__title {
+    font-size: 18px;
+  }
+  .authorization__span,
+  .btn__auth {
+    font-size: 16px;
+  }
 }
