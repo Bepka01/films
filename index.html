@@ -13,7 +13,7 @@
       <div class="user__name">Андрей/Карина</div>
       <div class="btn__header">
         <button class="header__btn-add">Добавить фильм</button>
-        <button>выйти</button>
+        <button class="header__btn-close">выйти</button>
       </div>
     </header>
 
@@ -25,6 +25,29 @@
     <div class="film__container">
       <div class="film__list">
         <ul class="movie-list"></ul>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Название окна</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">Напишите название фильма</p>
+          <div class="modal-input">
+            <input
+              class="input__film"
+              type="text"
+              placeholder="Введите значение..."
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="movie__btn modal-agree">Добавить</button>
+          <button class="movie__btn modal-cancel">Отмена</button>
+        </div>
       </div>
     </div>
   </body>
