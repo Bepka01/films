@@ -38,7 +38,7 @@ function addFilms() {
   liFilm.appendChild(label);
 
   liFilm.appendChild(btnDelete);
-  ulMovieList.appendChild(liFilm);
+  ulMovieList.prepend(liFilm);
   addedFilm.value = "";
   closeModalWindow();
 }
