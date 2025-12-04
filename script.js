@@ -1,4 +1,4 @@
-const HeadBtn = document.querySelector(".header__btn-add");
+const headBtn = document.querySelector(".header__btn-add");
 const ulMovieList = document.querySelector(".movie-list");
 const deleteFilm = document.querySelector(".movie__btn");
 const modalWindow = document.querySelector(".modal-overlay");
@@ -51,6 +51,6 @@ btnModalClose.addEventListener("click", closeModalWindow);
 function showModalWindow() {
   modalWindow.style.display = "flex";
 }
-HeadBtn.addEventListener("click", showModalWindow);
+headBtn.addEventListener("click", showModalWindow);
 
 modalBtnAgree.addEventListener("click", addFilms);
