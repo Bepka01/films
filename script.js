@@ -9,8 +9,10 @@ function validFormInput() {
   }
   if (inputPassword.value.length < 6) {
     alert("Пароль должен содержать минимум 6 символов");
+    return false;
   } else {
     alert(`${inputLogin.value}, Добро пожаловать!`);
+    window.location.href = "../КУРС-pr/index.html";
     inputLogin.value = "";
     inputPassword.value = "";
   }
