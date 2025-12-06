@@ -5,6 +5,7 @@ const btnClose = document.querySelector(".header__btn-close");
 const btnModalClose = document.querySelector(".modal-close");
 const modalBtnAgree = document.querySelector(".modal-agree");
 const addedFilm = document.querySelector(".input__film");
+const btnCancel = document.querySelector(".modal-cancel");
 
 function addFilms() {
   const liFilm = document.createElement("li");
@@ -12,6 +13,10 @@ function addFilms() {
   const nameFilm = document.createElement("span");
   nameFilm.classList.add("movie-title");
   nameFilm.textContent = addedFilm.value;
+  if (nameFilm.textContent === "") {
+    alert("Напишите название");
+    return;
+  }
 
   const btnDelete = document.createElement("button");
   btnDelete.classList.add("movie__btn");
@@ -58,3 +63,11 @@ function showModalWindow() {
 headBtn.addEventListener("click", showModalWindow);
 
 modalBtnAgree.addEventListener("click", addFilms);
+
+addedFilm.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    addFilms();
+  }
+});
+
+btnCancel.addEventListener("click", closeModalWindow);
