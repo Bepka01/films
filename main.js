@@ -70,4 +70,10 @@ addedFilm.addEventListener("keydown", function (e) {
   }
 });
 
+addedFilm.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeModalWindow();
+  }
+});
+
 btnCancel.addEventListener("click", closeModalWindow);
