@@ -48,9 +48,8 @@ function addFilms() {
 }
 
 const currUser = localStorage.getItem("userName");
-const currPass = localStorage.getItem("userPass");
+
 console.log("Текущее имя пользователя :", currUser);
-console.log("Текущий пароль пользователя :", currPass);
 
 function closeModalWindow() {
   modalWindow.style.display = "none";
@@ -77,3 +76,23 @@ addedFilm.addEventListener("keydown", function (e) {
 });
 
 btnCancel.addEventListener("click", closeModalWindow);
+
+function backToLogin() {
+  const questionExit = confirm("Вы уверены, что хотите выйти?");
+  if (questionExit === true) {
+    localStorage.removeItem("userName");
+    window.location.href = "index.html";
+  }
+}
+
+btnClose.addEventListener("click", backToLogin);
+
+function checkAuthorization() {
+  if (!currUser || currUser === null) {
+    window.location.href = "index.html";
+    return false;
+  }
+}
+checkAuthorization();
+
+document.addEventListener("DOMContentLoaded", checkAuthorization);

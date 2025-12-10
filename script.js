@@ -14,9 +14,7 @@ function validFormInput() {
     alert(`${inputLogin.value}, Добро пожаловать!`);
 
     localStorage.setItem("userName", inputLogin.value);
-    localStorage.setItem("userPass", inputPassword.value);
     console.log("userName:", localStorage.getItem("userName"));
-    console.log("userPass:", localStorage.getItem("userPass"));
     inputLogin.value = "";
     inputPassword.value = "";
     window.location.href = "main.html";
