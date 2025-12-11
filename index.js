@@ -83,7 +83,7 @@ function backToLogin() {
   const questionExit = confirm("Вы уверены, что хотите выйти?");
   if (questionExit === true) {
     localStorage.removeItem("userName");
-    window.location.href = "index.html";
+    window.location.href = "login.html";
   }
 }
 
@@ -95,6 +95,5 @@ function checkAuthorization() {
     return false;
   }
 }
-checkAuthorization();
 
 document.addEventListener("DOMContentLoaded", checkAuthorization);

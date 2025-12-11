@@ -36,7 +36,7 @@ authBtn.addEventListener("click", validFormInput);
 
 function checkLogin() {
   const savedLogin = localStorage.getItem("userName");
-  if (!savedLogin) {
+  if (savedLogin) {
     window.location.href = "login.html";
   }
 }
