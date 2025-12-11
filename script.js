@@ -33,3 +33,11 @@ inputPassword.addEventListener("keydown", function (e) {
   }
 });
 authBtn.addEventListener("click", validFormInput);
+
+function checkLogin() {
+  const savedLogin = localStorage.getItem("userName");
+  if (!savedLogin) {
+    window.location.href = "index.html";
+  }
+}
+document.addEventListener("DOMContentLoaded", checkLogin);

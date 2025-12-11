@@ -17,6 +17,9 @@ header {
   gap: 50px;
   margin: 5px;
 }
+.cheked {
+  border: 100px solid black;
+}
 
 .btn__films * {
   border: 1px solid black;

@@ -6,6 +6,8 @@ const btnModalClose = document.querySelector(".modal-close");
 const modalBtnAgree = document.querySelector(".modal-agree");
 const addedFilm = document.querySelector(".input__film");
 const btnCancel = document.querySelector(".modal-cancel");
+const film = document.querySelectorAll(".movie-item");
+const checkbox = document.querySelectorAll(".movie-label");
 
 function addFilms() {
   const liFilm = document.createElement("li");
