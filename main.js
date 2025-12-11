@@ -90,8 +90,8 @@ function backToLogin() {
 btnClose.addEventListener("click", backToLogin);
 
 function checkAuthorization() {
-  if (!currUser || currUser === null) {
-    window.location.href = "index.html";
+  if (!currUser) {
+    window.location.href = "login.html";
     return false;
   }
 }

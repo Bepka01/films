@@ -17,7 +17,7 @@ function validFormInput() {
     console.log("userName:", localStorage.getItem("userName"));
     inputLogin.value = "";
     inputPassword.value = "";
-    window.location.href = "main.html";
+    window.location.href = "index.html";
   }
 }
 
@@ -37,7 +37,7 @@ authBtn.addEventListener("click", validFormInput);
 function checkLogin() {
   const savedLogin = localStorage.getItem("userName");
   if (!savedLogin) {
-    window.location.href = "index.html";
+    window.location.href = "login.html";
   }
 }
 document.addEventListener("DOMContentLoaded", checkLogin);
